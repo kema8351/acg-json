@@ -383,7 +383,7 @@ namespace AcgJson
 
         #endregion
 
-        #region boolean
+        #region string
 
         public string GetString()
         {
@@ -414,14 +414,18 @@ namespace AcgJson
 
         }
 
-        public bool GetBool()
-        {
-            return GetItemFromTable(BoolTable);
-        }
+        #endregion
+
+        #region boolean
 
         public bool? GetNullableBool()
         {
             return GetItemFromTable(NullableBoolTable);
+        }
+
+        public bool GetBool()
+        {
+            return GetItemFromTable(BoolTable);
         }
 
         T GetItemFromTable<T>(Dictionary<char, KeyValuePair<string, T>> table)
