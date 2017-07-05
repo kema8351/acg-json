@@ -278,6 +278,8 @@ namespace AcgJson
 
                 yield return new KeyValuePair<TKey, TValue>(key, value);
 
+                SkipWhiteSpaces();
+
                 if (Peek == ItemSeparator)
                 {
                     // remove ','
